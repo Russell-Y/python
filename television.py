@@ -7,8 +7,8 @@ class Television:
   def __init__(self): 
     self.__status = False
     self.__muted = False
-    self.__volume += MIN_VOLUME
-    self.__channel += MIN_CHANNEL
+    self.__volume = MIN_VOLUME
+    self.__channel = MIN_CHANNEL
 
   def power(self): 
     self.__status = True
@@ -20,7 +20,7 @@ class Television:
   
   def channel_up(self): 
     if self.__channel == MAX_CHANNEL: 
-      self.__channel += MIN_CHANNEL
+      self.__channel = MIN_CHANNEL
     else: 
       self.__channel += 1
     return self.__channel
@@ -29,7 +29,7 @@ class Television:
 
   def volume_up(self): 
     if self.__volume == MAX_VOLUME: 
-      self.__volume += MIN_VOLUME
+      self.__volume = MAX_VOLUME
     else: 
       self.__volume += 1
     return self.__volume
