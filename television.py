@@ -47,7 +47,7 @@ class Television:
     return self.__volume
     
   def __str__(self): 
-
+    return f'Power = [{status}], Channel = [{channel}], Volume = [{volume}]'
     
 
 
