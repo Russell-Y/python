@@ -26,7 +26,12 @@ class Television:
     return self.__channel
   
   def channel_down(self): 
-
+    if self.__channel == MIN_CHANNEL: 
+      self.__channel = MAX_CHANNEL
+    else: 
+      self.__channel -= 1
+    return self.__channel
+    
   def volume_up(self): 
     if self.__volume == MAX_VOLUME: 
       self.__volume = MAX_VOLUME
@@ -35,7 +40,12 @@ class Television:
     return self.__volume
   
   def volume_down(self): 
-
+    if self.__volume == MIN_VOLUME: 
+      self.__volume = MIN_VOLUME
+    else: 
+      self.__volume -= 1
+    return self.__volume
+    
   def __str__(self): 
 
     
